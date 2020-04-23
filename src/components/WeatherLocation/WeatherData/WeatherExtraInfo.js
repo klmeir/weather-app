@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const WeatherExtraInfo = (props) => (
   <div>
@@ -6,5 +7,10 @@ const WeatherExtraInfo = (props) => (
     <span>{`${props.wind} viento`}</span>
   </div>
 );
+
+WeatherExtraInfo.propTypes = {
+  humidity: PropTypes.number.isRequired,
+  wind: PropTypes.string.isRequired,
+};
 
 export default WeatherExtraInfo;
